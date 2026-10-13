@@ -1,17 +1,20 @@
-import { Text, View, StyleSheet } from "react-native";
+import {Text, View, StyleSheet} from 'react-native';
 
-export default function Index() {
+export default function HelloWorld() {
   return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+    <View style ={styles.helloWorldStyle}>
+      <Text>Kaylee Schultz</Text>
+      <Text>MSCS</Text>
+      <Text>City University of Seattle</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: {
+  helloWorldStyle: {
     flex: 1,
-    alignItems: "center",
+    backgroundColor: "#ffff00",
     justifyContent: "center",
+    alignItems: "center"
   },
 });
