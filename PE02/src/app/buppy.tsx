@@ -15,14 +15,13 @@ const Buppy = () => {
                 source={isPet ? Buppy2 : Buppy1}
                 style={{width: 200, height: 200}}
             />
+            <Text>She'll help you pick out your favorite classes.</Text>
             <Button
                 onPress={() => {
                     setIsPet(true);
                 }}
-                title={isPet ? "Woof!" : "Press the button to pet Buppy!"}
-                disabled={isPet}
+                title={isPet ? "Woof!" : "Press the button to pet Buppy"}
             />
-            <Text>She'll help you pick out your favorite classes.</Text>
         </View>
     );
 }

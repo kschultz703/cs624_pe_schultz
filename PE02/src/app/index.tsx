@@ -1,4 +1,5 @@
 import { View, Text, ScrollView, TextInput} from 'react-native';
+import { Link } from 'expo-router';
 import BuppyComponent from './buppy';
 import styles from './styles';
 
@@ -8,10 +9,10 @@ export default function Index() {
     <ScrollView>
       <View style={styles.container}>
         <BuppyComponent/>
-        <Text>{"\n"}What is your favorite course?</Text>
+        <Text>What is your favorite course?</Text>
         <TextInput 
           style={styles.input}
-          defaultValue="Dinner! :)"
+          defaultValue="Dinner :)"
           clearTextOnFocus={true}/>
       </View>
 
@@ -45,7 +46,11 @@ export default function Index() {
           <li>CS 687 Computer Science Capstone</li>
         </ul>
 
-        <Text>The full list of available courses may be found here.</Text>
+        <Text>
+          The full list of available courses may be found{' '}
+          <Link style={styles.link} 
+                href="https://cityu.smartcatalogiq.com/2022-2023/ay-2022-2023-catalog/">here</Link>.
+        </Text>
       </View>
     </ScrollView>
   );
