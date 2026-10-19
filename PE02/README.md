@@ -1,56 +1,18 @@
-# Welcome to your Expo app 👋
+# Input
+The user is able to input their favorite class in the text box labelled "What is your favorite course?". The user also may click on the blue button to change several aspects of the site's appearance.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Process
+When the blue "Pet Buppy" button is clicked, the BuppyComponent variable "isPet" changes from False to True.
 
-## Get started
+# Output
+Once the "isPet" variable is updated, several changes are made to the app's display. First, the picture of my dog changes from her looking kind of sleepy to her with her tongue out. The button text also updates to "WOOF!". 
 
-1. Install dependencies
+The user will also be redirected to a different site if they click "here" at the bottom of the page.
 
-   ```bash
-   npm install
-   ```
+# AI Usage
+The majority of this project was built referencing the work previously done in HOS 02. However, I did use AI to learn how to insert a link to the City University website on lines 49-51 of index.tsx. I knew there had to be a simple way to do this, but regular Google search results seemed more complicated than they needed to be.
 
-2. Start the app
+Example Sources:
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
-
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- https://stackoverflow.com/questions/30208108/make-part-of-the-text-as-link-react-localization
+- https://www.xjavascript.com/blog/how-does-one-display-a-hyperlink-in-react-native-app/
