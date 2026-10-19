@@ -1,17 +1,13 @@
-import { View, Text, Image, ScrollView, TextInput, StyleSheet} from 'react-native';
-import Buppy1 from '../../assets/images/Buppy1.jpg';
+import { View, Text, ScrollView, TextInput} from 'react-native';
+import BuppyComponent from './buppy';
+import styles from './styles';
 
 
 export default function Index() {
   return (
     <ScrollView>
       <View style={styles.container}>
-        <Text>This is Buppy!</Text>
-        <Image 
-          source={Buppy1}
-          style={{width: 200, height: 200}}
-        />
-        <Text>She'll help you pick out your favorite classes.</Text>
+        <BuppyComponent/>
         <Text>{"\n"}What is your favorite course?</Text>
         <TextInput 
           style={styles.input}
@@ -54,22 +50,3 @@ export default function Index() {
     </ScrollView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  header: {
-    fontSize: 25,
-    fontWeight: "bold",
-  },
-  input: {
-    height: 50,
-    width: 250,
-    borderColor: 'gray',
-    borderWidth: 1,
-    textAlign: "center"
-  },
-});
