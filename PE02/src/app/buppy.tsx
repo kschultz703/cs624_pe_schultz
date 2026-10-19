@@ -4,7 +4,6 @@ import Buppy1 from "../../assets/images/Buppy1.jpg";
 import Buppy2 from "../../assets/images/Buppy2.jpg";
 import styles from './styles';
 
-
 const Buppy = () => {
     const [isPet, setIsPet] = useState(false)
 

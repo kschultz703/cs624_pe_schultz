@@ -3,7 +3,6 @@ import { Link } from 'expo-router';
 import BuppyComponent from './buppy';
 import styles from './styles';
 
-
 export default function Index() {
   return (
     <ScrollView>
