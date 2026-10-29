@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import { View, ScrollView, StyleSheet } from 'react-native'
+import Button from "./Button";
 import Heading from './Heading';
 import Input from './Input';
 import styles from './styles';
@@ -31,6 +32,7 @@ class App extends Component {
             inputValue={this.state.inputValue}
             inputChange={(text) => this.inputChange(text)} 
           />
+          <Button />
         </ScrollView>
       </View>
     )
