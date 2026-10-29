@@ -5,6 +5,8 @@ import Heading from './Heading';
 import Input from './Input';
 import styles from './styles';
 
+let index = 0
+
 class App extends Component {
   constructor() {
     super();
@@ -13,6 +15,7 @@ class App extends Component {
         todos: [],
         type: 'All',
     };
+    this.submitTodo = this.submitTodo.bind(this)
   }
 
   inputChange(inputValue) {
@@ -32,10 +35,27 @@ class App extends Component {
             inputValue={this.state.inputValue}
             inputChange={(text) => this.inputChange(text)} 
           />
-          <Button />
+          <Button submitTodo={this.submitTodo}/>
         </ScrollView>
       </View>
     )
+  }
+
+  submitTodo() {
+    if(!this.state.inputValue.match(/^\s*$/)) {
+      const todo = {
+        title: this.state.inputValue,
+        index,
+        complete: false
+      }
+
+      const todos = [...this.state.todos, todo]
+      this.setState({todos, inputValue: ""}, () => {
+        console.log("State: ", this.state)
+      })
+
+      index++;
+    }
   }
 }
 
