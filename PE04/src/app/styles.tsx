@@ -97,6 +97,12 @@ const styles = StyleSheet.create({
   deleteButton: {
     color: 'rgba(175, 47, 47, 1)'
   },
+  tabBarContainer: {
+        height: 70,
+        flexDirection: 'row',
+        borderTopWidth: 1,
+        borderTopColor: '#dddddd'
+  },
 })
 
 export default styles
