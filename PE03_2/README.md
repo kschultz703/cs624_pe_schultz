@@ -1,10 +1,8 @@
 # Input
-The user is able to input their favorite class in the text box labelled "What is your favorite course?". The user also may click on the blue button to change several aspects of the site's appearance.
+The user is able to make several inputs to the To Do List application. First, they are able to type text in the Input component. If they hit "Submit", the Input component text is used to create a new Todo item and added to the list. Each To Do item has a "Done" and a "Delete" button that allows them to be removed or marked as complete. The tasks can be filtered by completion status by selecting an option from the Tab Bar at the bottom of the screen.
 
 # Process
-When the blue "Pet Buppy" button is clicked, the BuppyComponent variable "isPet" changes from False to True.
+Tasks are modified based on the provided buttons. The primary processes are creating new tasks, and filtering the tasks based on completion status. Each task is made of a number, a description, and a completion status. When the state's type is changed using the Tab Bar, a copy of the original to do list is made and filtered to only match tasks with the appropriate completion status.
 
 # Output
-Once the "isPet" variable is updated, several changes are made to the app's display. First, the picture of my dog changes from her looking kind of sleepy to her with her tongue out. The button text also updates to "WOOF!". 
-
-The user will also be redirected to a different site if they click "here" at the bottom of the page.
+The primary output for this application is the Task List. Different tasks are visible based on the chosen parameters. However, stylistic elements will also change depending on the user's inputs, such as a completed tasks's "Done" button text turning green and bold.
