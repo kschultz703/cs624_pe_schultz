@@ -103,6 +103,25 @@ const styles = StyleSheet.create({
         borderTopWidth: 1,
         borderTopColor: '#dddddd'
   },
+  item: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+  },
+  border: {
+      borderLeftWidth: 1,
+      borderLeftColor: '#dddddd'
+  },
+  itemText: {
+      color: '#777777',
+      fontSize: 16
+  },
+  selected: {
+      backgroundColor: '#ffffff'
+  },
+  bold: {
+      fontWeight: 'bold'
+  },
 })
 
 export default styles

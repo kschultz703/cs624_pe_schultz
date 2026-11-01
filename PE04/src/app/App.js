@@ -3,6 +3,7 @@ import { View, ScrollView} from 'react-native'
 import Button from "./Button";
 import Heading from './Heading';
 import Input from './Input';
+import TabBar from './TabBar'
 import TodoList from "./TodoList"
 import styles from './styles';
 
@@ -65,7 +66,7 @@ class App extends Component {
   }
 
   render() {
-    const {inputValue, todos} = this.state
+    const {inputValue, todos, type} = this.state
 
     return (
       <View style={styles.container}>
@@ -82,9 +83,11 @@ class App extends Component {
             todos={todos}
             toggleComplete={this.toggleComplete}
             deleteTodo={this.deleteTodo}
+            type={type}
           />
           <Button submitTodo={this.submitTodo}/>
         </ScrollView>
+        <TabBar type={type} setType={this.setType} />
       </View>
     )
   }
