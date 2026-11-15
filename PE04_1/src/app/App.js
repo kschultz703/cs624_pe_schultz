@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, Platform } from 'react-native';
 
 export default class App extends Component {
     render() {
@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     cardName: {
         color: 'white',
         marginTop: 30,
+        fontWeight: bold,
     },
     cardOccupationContainer: {
         borderColor: 'black',
@@ -75,11 +76,13 @@ const styles = StyleSheet.create({
     cardOccupation: {
         marginTop: 10,
         marginBottom: 10,
+        fontWeight: bold,
     },
     cardDescription: {
         marginTop: 10,
         marginRight: 40,
         marginLeft: 40,
-        marginBottom: 10
+        marginBottom: 10,
+        fontStyle: 'italic'
     }
 })
