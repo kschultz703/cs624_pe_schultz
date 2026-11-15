@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
 
 export default class App extends Component {
     render() {
         return (
             <View style={styles.container}> 
                 <View style={styles.cardContainer}>
-                    <Image 
-                        style={styles.cardImage}
-                        source = {require("../../assets/images/user.png")}
-                    />
+                    <View style={styles.cardImageContainer}>
+                        <Image 
+                            style={styles.cardImage}
+                            source = {require("../../assets/images/user.png")}
+                        />
+                    </View>
+                    <View>
+                        <Text style={styles.cardName}>John Doe</Text>
+                    </View>
+                    <View style={styles.cardOccupationContainer}>
+                        <Text style={styles.cardOccupation}>React Native Developer</Text>
+                    </View>
+                    <View>
+                        <Text style={styles.cardDescription}>
+                            John is a really great JavaScript developer. He
+                            loves using JS to build React Native applications
+                            for iOS and Android.
+                        </Text>
+                    </View>
                 </View>
             </View>
         );
@@ -40,7 +55,7 @@ const styles = StyleSheet.create({
         borderColor: "black",
         width: 120,
         height: 120,
-        radius: 60,
+        borderRadius: 60,
         alignItems: "center",
         marginTop: 30,
         paddingTop: 15
@@ -48,5 +63,23 @@ const styles = StyleSheet.create({
     cardImage: {
         width: 80,
         height: 80
+    },
+    cardName: {
+        color: 'white',
+        marginTop: 30,
+    },
+    cardOccupationContainer: {
+        borderColor: 'black',
+        borderBottomWidth: 3
+    },
+    cardOccupation: {
+        marginTop: 10,
+        marginBottom: 10,
+    },
+    cardDescription: {
+        marginTop: 10,
+        marginRight: 40,
+        marginLeft: 40,
+        marginBottom: 10
     }
 })
