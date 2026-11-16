@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'; 
-import update from 'immutability-helper'; 
 import { Platform, Image, StyleSheet, Text, View, TouchableHighlight } from 'react-native'; 
 
-
 const ProfileCard = (props) => {
-    const { image, name, occupation, description, onPress, showThumbnail } = props;
+    const [showThumbnail, setShowThumbnail] = useState(true)
+
+    let image = props.image;
+    let name = props.name;
+    let occupation = props.occupation;
+    let description = props.description;
     let containerStyles = [styles.cardContainer];
 
     if (showThumbnail) {  
@@ -13,7 +16,7 @@ const ProfileCard = (props) => {
     }
 
     return (
-        <TouchableHighlight style={styles.cardWrapper} onPress={onPress}> 
+        <TouchableHighlight style={styles.cardWrapper} onPress={() => {setShowThumbnail(!showThumbnail)}}> 
             <View style={[containerStyles]}>
                 <View style={styles.cardImageContainer}>
                     <Image 
@@ -40,30 +43,15 @@ ProfileCard.propTypes = {
     name: PropTypes.string.isRequired,
     occupation: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    showThumbnail: PropTypes.bool.isRequired,
-    onPress: PropTypes.func.isRequired
 };
 
 const profileCardColor = 'dodgerblue';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    flexContainer: {
-        width: 150,
-        height: 150,
-        margin: 10,
-        flexDirection: 'row',
-        flexWrap: "wrap",
-        justifyContent: "center",
-    },
     cardWrapper: {
         flexBasis: "50%",
         maxWidth: "50%",
-        padding: 8,
+        marginRight: 150,
     },
     cardContainer: {
         alignItems: 'center',
