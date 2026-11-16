@@ -109,7 +109,7 @@ export default class App extends Component {
         }, this);
 
         return (
-            <View style={styles.container}>
+            <View style={styles.flexContainer}>
                 {list} 
             </View>
         );
@@ -123,6 +123,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    flexContainer: {
+        width: 150,
+        height: 150,
+        margin: 10,
+        flexDirection: 'row'
     },
     cardContainer: {
         alignItems: 'center',
