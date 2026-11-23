@@ -9,13 +9,11 @@ const Heading = ({ headerText }) => (
 const styles = StyleSheet.create({
     header: {
         marginTop: 80,
-        textAlign: "center",
+        alignItems: 'center',
     },
     headerText: {
-        textAlign: 'center',
-        fontSize: 60,
+        fontSize: 40,
         color: '#222222',
-        fontWeight: '100'
     },
 });
 

@@ -17,6 +17,7 @@ const shadowDescription = "Shadow Mages are an elusive bunch, able to summon a v
 const arcaneDescription = "Arcane Wizards are incredible scholars, constantly pushing the boundaries of known magic. They excel at teleportation and conjuration.";
 const natureDescription = "Nature Wizards can control the earth, the air, and plant life. Exceptionally talented individuals are able to shapeshift.";
 
+// TODO: Figure out why flexContainer is offcenter.
 export default class ElementSelect extends Component {
     render() {
         return (
