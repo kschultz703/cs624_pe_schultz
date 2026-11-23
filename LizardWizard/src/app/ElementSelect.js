@@ -1,51 +1,60 @@
 import { Component } from 'react';
 import { StyleSheet, View, ScrollView} from 'react-native';
-import ElementCard from "./ElementCard"
+import ElementCard from "./ElementCard";
+import Heading from "./Heading";
 
-const fire = require("../../assets/images/fire.png");
-const water = require("../../assets/images/wave.png");
-const light = require("../../assets/images/sun.png");
-const shadow = require("../../assets/images/moon.png");
-const arcane = require("../../assets/images/magic.png");
-const nature = require("../../assets/images/forest.png");
+const fireIcon = require("../../assets/images/fire.png");
+const waterIcon = require("../../assets/images/wave.png");
+const lightIcon = require("../../assets/images/sun.png");
+const shadowIcon = require("../../assets/images/moon.png");
+const arcaneIcon = require("../../assets/images/magic.png");
+const natureIcon = require("../../assets/images/forest.png");
+
+const fireDescription = "Fire Wizards specialize in combat. They took \"don't fight fire with fire\" as a personal challenge.";
+const waterDescription = "Water Wizards are extremely versatile. They can attack with ice spells, and heal themselves or their allies with cleansing water.";
+const lightDescription = "Light Wizards are able to bend the light to create illusions, or even become invisible.";
+const shadowDescription = "Shadow Mages are an elusive bunch, able to summon a variety of demons to help them. Some may read the future in the stars.";
+const arcaneDescription = "Arcane Wizards are incredible scholars, constantly pushing the boundaries of known magic. They excel at teleportation and conjuration.";
+const natureDescription = "Nature Wizards can control the earth, the air, and plant life. Exceptionally talented individuals are able to shapeshift.";
 
 export default class ElementSelect extends Component {
     render() {
         return (
             <ScrollView>
+                <Heading headerText="What type of magic would you like to study?"/>
                 <View style={styles.container}>
                     <View style={styles.flexContainer}>
                         <ElementCard 
-                            image={fire}
+                            image={fireIcon}
                             name={"Fire"}
-                            description={"Spends a lot of time reading a cookbook of goblin recipes."}
+                            description={fireDescription}
                         />
                         <ElementCard 
-                            image={light}
+                            image={lightIcon}
                             name={"Light"}
-                            description={"Elle is an elderly lady who transformed into an ice fairy to cure her dementia. She is the coolest."}
+                            description={lightDescription}
                         />
                         <ElementCard 
-                            image={arcane}
+                            image={arcaneIcon}
                             name={"Arcane"}
-                            description={"Katia is a talented shapeshifter who can manually reshape her own mass, including anything she's holding. Formerly an art history professor."}
+                            description={arcaneDescription}
                         />
                     </View>
                     <View style={styles.flexContainer}>
                         <ElementCard 
-                            image={water}
+                            image={waterIcon}
                             name={"Water"}
-                            description={"GC, BWR, NW Princess Donut the Queen Anne Chonk is an award-winning Persian cat. She has a pet dinosaur named Mongo."}
+                            description={waterDescription}
                         />
                         <ElementCard 
-                            image={shadow}
+                            image={shadowIcon}
                             name={"Shadow"}
-                            description={"Prepotente is a goat who received a huge intelligence boost after eating a Pet Biscuit. Known to occasionally scream at random."}
+                            description={shadowDescription}
                         />
                         <ElementCard 
-                            image={nature}
+                            image={natureIcon}
                             name={"Nature"}
-                            description={"Imani is a quiet, serious woman who chose to learn magic. She used to be a nurse and prefers to heal, but she also has a giant magic sword."}
+                            description={natureDescription}
                         />
                     </View>
                 </View>
@@ -60,9 +69,9 @@ const styles = StyleSheet.create({
         flex: 1
     },
     flexContainer: {
-        width: 150,
-        height: 150,
-        margin: 60,
+        width: 700,
+        height: 350,
+        margin: 50,
         flexDirection: 'row'
     },
 });

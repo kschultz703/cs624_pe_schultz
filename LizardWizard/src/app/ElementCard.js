@@ -1,133 +1,101 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types'; 
-import { Platform, Image, StyleSheet, Text, View, TouchableHighlight } from 'react-native'; 
+import { Platform, Image, StyleSheet, Text, View, Button } from 'react-native'; 
 
 const ElementCard = (props) => {
-    const [showThumbnail, setShowThumbnail] = useState(true)
 
     let image = props.image;
     let name = props.name;
-    let occupation = props.occupation;
     let description = props.description;
-    let containerStyles = [styles.cardContainer];
 
-    if (showThumbnail) {  
-        containerStyles.push(styles.cardThumbnail);
+    function selectElement() {
+        // TODO: This function should:
+        // 1. Confirm the user's element choice.
+        // 2. Make some change to the user's custom character. 
+        // 3. Redirect to the main home page.
+        // 4. AMBITIOUS. Add an equippable wizard hat that matches the element color to the user inventory.
     }
 
+    // TODO: Replace the Button with a TouchableHighlight to improve customization.
     return (
-        <TouchableHighlight style={styles.cardWrapper} onPress={() => {setShowThumbnail(!showThumbnail)}}> 
-            <View style={[containerStyles]}>
+        <View style={styles.cardWrapper}> 
+            <View style={styles.cardContainer}>
                 <View style={styles.cardImageContainer}>
                     <Image 
                         style={styles.cardImage} 
                         source={image}
                     />
                 </View>
-                <View style={styles.cardOccupationContainer}>
+                <View style={styles.cardNameContainer}>
                     <Text style={styles.cardName}>{name}</Text>
                 </View>
                 <View>
                     <Text style={styles.cardDescription}>{description}</Text>
                 </View>
+                <Button 
+                    title="Select"
+                    onPress={selectElement}
+                    color="#7c5aa6"
+                />
             </View>
-        </TouchableHighlight>
+        </View>
     )
 };
 
 ElementCard.propTypes = {
     image: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
-    occupation: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
 };
-
-const profileCardColor = 'gray';
 
 const styles = StyleSheet.create({
     cardWrapper: {
         flexBasis: "50%",
         maxWidth: "50%",
-        marginRight: 150,
     },
     cardContainer: {
         alignItems: 'center',
-        borderColor: 'black',
-        borderWidth: 3,
+        borderColor: '#d4d1c9',
+        borderWidth: 2,
         borderStyle: 'solid',
         borderRadius: 20,
-        backgroundColor: profileCardColor,
+        backgroundColor: "#f5f3ed",
         width: 300,
         height: 400,
-        ...Platform.select({ 
-          ios: {
-            shadowColor: 'black',
-            shadowOffset: {
-              height: 10
-            },
-            shadowOpacity: 1
-          },
-          android: {
-            elevation: 15
-          }
-        })
     },
     cardImageContainer: {
         alignItems: 'center',
         width: 120,
         height: 120,
-        borderRadius: 60,
         marginTop: 10,
         paddingTop: 10,
-        ...Platform.select({ 
-          ios: {
-            shadowColor: 'black',
-            shadowOffset: {
-              height: 10,
-            },
-            shadowOpacity: 1
-          },
-          android: {
-            borderWidth: 3,
-            borderColor: 'black',
-            elevation: 15
-          }
-        })
     },
     cardImage: {
         width: 150,
         height: 150,
     },
     cardName: {
-        color: 'white',
+        color: '#222222',
         fontWeight: 'bold',
         fontSize: 24,
         marginTop: 50,
-        textShadowColor: 'black',
-        textShadowOffset: {
-            height: 5,
-            width: 5
-        },
-        textShadowRadius: 3 
+        marginBottom: 5,
     },
-    cardOccupationContainer: {
-        borderColor: 'black',
-        borderBottomWidth: 3
-    },
-    cardOccupation: {
-        fontWeight: 'bold', 
-        marginTop: 10,
-        marginBottom: 10,
+    cardNameContainer: {
+        borderColor: '#222222',
+        borderBottomWidth: 1,
+        alignItems: 'center',
+        width: 100,
     },
     cardDescription: {
         fontStyle: 'italic', 
         marginTop: 10,
         marginRight: 40,
         marginLeft: 40,
-        marginBottom: 10
+        marginBottom: 10,
+        height: 100,
     },
-    cardThumbnail: {
-        transform: [{scale: 0.2}]
+    button: {
+        color: "#7c5aa6",
     },
 });
 
